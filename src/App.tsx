@@ -33,7 +33,7 @@ export default function App() {
     //     <Copyright />
     //   </Box>
     // </Container>
-    <BrowserRouter>
+    <BrowserRouter basename="/Locicero-Hospital-Group">
       <Routes>
         <Route path="/" element={<Blog />} />
         <Route path="/about" element={<About />} />
