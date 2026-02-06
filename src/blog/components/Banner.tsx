@@ -4,6 +4,7 @@ import hero from '../../assets/main-hero-overlay.png';
 import hospitalGroupLogo from '../../assets/LHG-logo-1024x344.png';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import Divider from '@mui/material/Divider';
 
 export default function Banner() {
     return (
@@ -30,13 +31,24 @@ export default function Banner() {
                 flexDirection: 'column',
                 justifyContent: { xs: 'center', md: 'center' }
             }}>
-                <Grid container spacing={4} alignItems="center" sx={{ padding: '40px' }}>
+                <Grid container spacing={4} alignItems="center" sx={{ padding: '0px' }}>
                     {/* Left Side: Text */}
                     <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography variant="h2" sx={{ fontWeight: 'bold', mb: 2, color: '#064b83', fontSize: { xs: '24px' } }}>
+                        <Typography variant="h2" sx={{
+                            pl: 4,              // 1. Push everything right (padding)
+                            textIndent: '-2rem', // 2. Pull first line back left (negative indent)
+                            lineHeight: 1.0, 
+                            fontFamily: 'Inter Tight', 
+                            fontWeight: '600', 
+                            mb: 1, 
+                            color: '#064b83', 
+                            fontSize: { xs: '2rem', md: '3rem' }, 
+                            letterSpacing: '0.0em'
+                        }}>
                             Bridging care from facilities to home
                         </Typography>
-                        <Typography variant="h5" sx={{ mb: 4, opacity: 0.9, color: '#064b83', fontSize: { xs: '14px' } }}>
+                        <Divider sx={{ borderBottomWidth: 2, borderRadius: 1 }} />
+                        <Typography variant="h5" sx={{ pl:8, textIndent: '-2rem', fontFamily: 'Inter Tight', mb: 4, opacity: 0.9, color: '#064b83', fontSize: { xs: '12px', md: '14px' }, mt: 1 }}>
                             Providing Services at Hospitals, Long-Term Acute Care, Skilled Nursing and Assisted Living Facilities.
                         </Typography>
 

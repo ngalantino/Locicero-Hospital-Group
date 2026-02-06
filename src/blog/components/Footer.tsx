@@ -105,7 +105,7 @@ export default function Footer() {
           </Box>
           <Box
             sx={{
-              display: { xs: 'none', sm: 'flex' },
+              display: { xs: 'flex', sm: 'flex' },
               flexDirection: 'column',
               gap: 1,
             }}
