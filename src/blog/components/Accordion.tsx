@@ -58,7 +58,6 @@ export default function FacilityAccordion() {
                             <List sx={{ flex: 1, py: 0 }}>
                                 {[
                                     "Advent Health Carrollwood",
-                                    "Advent Health Connerton (LTAC)",
                                     "Advent Health Tampa",
                                     "Brandon Regional Hospital",
                                     "Encompass Rehabilation Hospital",
@@ -79,7 +78,6 @@ export default function FacilityAccordion() {
                             {/* Right List */}
                             <List sx={{ flex: 1, py: 0 }}>
                                 {[
-                                    "Kindred Hospital - South (LTAC)",
                                     "Memorial Hospital of Tampa",
                                     "St. Joseph's Hospital - Main",
                                     "St. Joseph's Hospital - North",
@@ -135,9 +133,7 @@ export default function FacilityAccordion() {
                                     "Bayshore Pointe Nursing and Rehab",
                                     "Canterbury Tower",
                                     "Carrollwood Care Center",
-                                    "Concordia Village of Tampa",
                                     "Gandy Crossing Rehabilitation and Healthcare Center",
-                                    "Habana Healthcare Center"
                                 ].map((hospital) => (
                                     <ListItem key={hospital} disableGutters sx={{ py: 0.5 }}>
                                         <ListItemIcon sx={{ minWidth: 24 }}>
@@ -155,10 +151,9 @@ export default function FacilityAccordion() {
                             <List sx={{ flex: 1, py: 0 }}>
                                 {[
                                     "Lakes at Lutz Healthcare and Rehabilitation",
-                                    "Palm Garden of Tampa",
                                     "Rehabilitation and Healthcare Center of Tampa",
-                                    "Tampa Lakes Health and Rehabilitation",
-                                    "Ybor City Healthcare and Rehab Center"
+                                    "Ybor City Healthcare and Rehab Center",
+                                    "Allegro"
                                 ].map((hospital) => (
                                     <ListItem key={hospital} disableGutters sx={{ py: 0.5 }}>
                                         <ListItemIcon sx={{ minWidth: 24 }}>

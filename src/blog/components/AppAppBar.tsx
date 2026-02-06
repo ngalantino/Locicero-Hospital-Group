@@ -14,6 +14,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import { IconButton, Tooltip, Stack } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
+import { useState, useEffect } from 'react';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -21,15 +22,15 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   justifyContent: 'space-between',
   flexShrink: 0,
   borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
-  backdropFilter: 'blur(24px)',
-  border: '1px solid',
-  borderColor: (theme.vars || theme).palette.divider,
-  backgroundColor: theme.vars
-    ? `rgba(${theme.vars.palette.background.defaultChannel} / 0.4)`
-    : alpha(theme.palette.background.default, 0.4),
+  // backdropFilter: 'blur(24px)',
+  // border: '1px solid',
+  // borderColor: (theme.vars || theme).palette.divider,
+  // backgroundColor: theme.vars
+  //   ? `rgba(${theme.vars.palette.background.defaultChannel} / 0.1)`
+  //   : alpha(theme.palette.background.default, 0.4),
   // backgroundColor: 'rgba(255,255,255,0.6)',
-  boxShadow: (theme.vars || theme).shadows[1],
-  padding: '8px 12px',
+  // boxShadow: (theme.vars || theme).shadows[1],
+  // padding: '8px 12px',
 }));
 
 export default function AppAppBar() {
@@ -39,19 +40,46 @@ export default function AppAppBar() {
     setOpen(newOpen);
   };
 
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if user has scrolled down more than 50 pixels
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the listener when the component unmounts
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
   return (
     <AppBar
       position="fixed"
       enableColorOnDark
       sx={{
         boxShadow: 0,
-        bgcolor: 'transparent',
+        bgcolor: isScrolled? 'rgba(6,75,131,1)' : 'transparent',
         backgroundImage: 'none',
-        mt: 'calc(var(--template-frame-height, 0px) + 28px)',
+        // mt: 'calc(var(--template-frame-height, 0px) + 28px)',
       }}
     >
       <Container maxWidth="lg">
-        <StyledToolbar variant="dense" disableGutters>
+        <StyledToolbar variant="dense" disableGutters sx={{ 
+          pt: '16px',
+          pb: '16px',
+          backgroundColor: isScrolled? 'rgba(6,75,131,0.8)' : 'transparent',
+          backdropFilter: isScrolled? 'blur(24px)' : 'none',
+          border: isScrolled? '1px solid' : 'none',
+          borderColor: isScrolled? 'rgba(6,75,131,0.6)' : 'none',
+          }}>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <ButtonBase component={RouterLink} to="/">
               <Box
