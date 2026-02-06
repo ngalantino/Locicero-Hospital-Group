@@ -1,7 +1,7 @@
-import { Box, Paper } from '@mui/material';
+import { Paper } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import hero from '../../assets/banner.jpg';
-import hospitalGroupLogo from '../../assets/LHG-logo-1024x344.png';
+// import hospitalGroupLogo from '../../assets/LHG-logo-1024x344.png';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';

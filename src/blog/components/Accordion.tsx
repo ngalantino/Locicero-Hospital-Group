@@ -153,7 +153,7 @@ export default function FacilityAccordion() {
                                     "Lakes at Lutz Healthcare and Rehabilitation",
                                     "Rehabilitation and Healthcare Center of Tampa",
                                     "Ybor City Healthcare and Rehab Center",
-                                    "Allegro"
+                                    "Allegro",
                                 ].map((hospital) => (
                                     <ListItem key={hospital} disableGutters sx={{ py: 0.5 }}>
                                         <ListItemIcon sx={{ minWidth: 24 }}>
