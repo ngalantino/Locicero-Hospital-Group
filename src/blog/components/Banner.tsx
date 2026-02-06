@@ -30,7 +30,7 @@ export default function Banner() {
                 flexDirection: 'column',
                 justifyContent: { xs: 'end', md: 'center' }
             }}>
-                <Grid container spacing={4} alignItems="center" sx={{ padding: '40px' }}>
+                <Grid container spacing={4} alignItems="center" sx={{ padding: '40px', mb: { xs: '50px', md: '0px' } }}>
                     {/* Left Side: Text */}
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h2" sx={{ fontWeight: 'bold', mb: 2, color: '#064b83', fontSize: { xs: '24px' } }}>
