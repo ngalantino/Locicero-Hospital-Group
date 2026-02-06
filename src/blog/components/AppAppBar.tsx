@@ -3,19 +3,17 @@ import { alpha, styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
-import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import ColorModeIconDropdown from '../../shared-theme/ColorModeIconDropdown';
 import lhealthLogo from '../../assets/locicero_logo_transparent-300x220.png';
-import Link from '@mui/material/Link';
 import { Link as RouterLink } from 'react-router-dom';
 import ButtonBase from '@mui/material/ButtonBase';
+import { IconButton, Tooltip, Stack } from '@mui/material';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -56,20 +54,20 @@ export default function AppAppBar() {
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <ButtonBase component={RouterLink} to="/">
-            <Box
-              component="img"
-              src={lhealthLogo}
-              alt="LoCicero Health"
-              sx={{
-                height: 40,
-                width: 100,
-                mr: 2,
-                objectFit: 'contain' // Ensures the PNG doesn't stretch weirdly
-              }}
-            />
+              <Box
+                component="img"
+                src={lhealthLogo}
+                alt="LoCicero Health"
+                sx={{
+                  height: 40,
+                  width: 100,
+                  mr: 2,
+                  objectFit: 'contain' // Ensures the PNG doesn't stretch weirdly
+                }}
+              />
             </ButtonBase>
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Link component={RouterLink} to="/about">
+              {/* <Link component={RouterLink} to="/about">
               <Button variant="text" color="info" size="small">
                 About
               </Button>
@@ -93,7 +91,7 @@ export default function AppAppBar() {
               <Button variant="text" color="info" size="small">
                 Contact
               </Button>
-              </Link>
+              </Link> */}
             </Box>
           </Box>
           <Box
@@ -103,16 +101,33 @@ export default function AppAppBar() {
               alignItems: 'center',
             }}
           >
-            {/* <Button color="primary" variant="text" size="small">
-              Sign in
-            </Button> */}
-            {/* <Button color="primary" variant="contained" size="small">
-              Sign up
-            </Button>
-            <ColorModeIconDropdown /> */}
+
+            <Stack direction="row" spacing={1}>
+              <Tooltip title="813-873-1072" arrow>
+                <IconButton
+                  color="inherit"
+                  href="tel:8138731072" // Replaces with your actual phone number
+                  aria-label="call"
+                >
+                  <PhoneIcon />
+                </IconButton>
+              </Tooltip>
+
+              <Tooltip title="info@locicerohospitalgroup.com" arrow>
+                <IconButton
+                  color="inherit"
+                  href="mailto:info@locicerohospitalgroup.com" // Replace with your email
+                  aria-label="email"
+                >
+                  <EmailIcon />
+                </IconButton>
+              </Tooltip>
+            </Stack>
+
+
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
-            <ColorModeIconDropdown size="medium" />
+
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
               <MenuIcon />
             </IconButton>
@@ -137,23 +152,31 @@ export default function AppAppBar() {
                     <CloseRoundedIcon />
                   </IconButton>
                 </Box>
-                <MenuItem>Features</MenuItem>
-                <MenuItem>Testimonials</MenuItem>
-                <MenuItem>Highlights</MenuItem>
-                <MenuItem>Pricing</MenuItem>
-                <MenuItem>FAQ</MenuItem>
-                <MenuItem>Blog</MenuItem>
+
+
+                <Stack direction="row" spacing={1}>
+                  <Tooltip title="Call Us" arrow>
+                    <IconButton
+                      color="inherit"
+                      href="tel:8138731072" // Replaces with your actual phone number
+                      aria-label="call"
+                    >
+                      <PhoneIcon />
+                    </IconButton>
+                  </Tooltip>
+
+                  <Tooltip title="Email Us" arrow>
+                    <IconButton
+                      color="inherit"
+                      href="mailto:info@locicerohospitalgroup.com" // Replace with your email
+                      aria-label="email"
+                    >
+                      <EmailIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Stack>
                 <Divider sx={{ my: 3 }} />
-                {/* <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
-                    Sign up
-                  </Button>
-                </MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="outlined" fullWidth>
-                    Sign in
-                  </Button>
-                </MenuItem> */}
+
               </Box>
             </Drawer>
           </Box>

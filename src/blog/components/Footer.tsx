@@ -1,25 +1,20 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import InputLabel from '@mui/material/InputLabel';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/X';
-import SitemarkIcon from './SitemarkIcon';
+import lhealthLogo from '../../assets/locicero_logo_transparent-300x220.png';
 
 function Copyright() {
   return (
     <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
       {'Copyright © '}
-      <Link color="text.secondary" href="https://mui.com/">
-        Sitemark
+      <Link color="text.secondary" href="https://locicerohealth.com/">
+        LoCicero Health
       </Link>
       &nbsp;
       {new Date().getFullYear()}
@@ -58,8 +53,18 @@ export default function Footer() {
             }}
           >
             <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-              <SitemarkIcon />
-              <Typography
+              <Box
+                component="img"
+                src={lhealthLogo}
+                alt="LoCicero Health"
+                sx={{
+                  height: 40,
+                  width: 100,
+                  mr: 2,
+                  objectFit: 'contain' // Ensures the PNG doesn't stretch weirdly
+                }}
+              />
+              {/* <Typography
                 variant="body2"
                 gutterBottom
                 sx={{ fontWeight: 600, mt: 2 }}
@@ -69,8 +74,8 @@ export default function Footer() {
               <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
                 Subscribe for weekly updates. No spams ever!
               </Typography>
-              <InputLabel htmlFor="email-newsletter">Email</InputLabel>
-              <Stack direction="row" spacing={1} useFlexGap>
+              <InputLabel htmlFor="email-newsletter">Email</InputLabel> */}
+              {/* <Stack direction="row" spacing={1} useFlexGap>
                 <TextField
                   id="email-newsletter"
                   hiddenLabel
@@ -95,7 +100,7 @@ export default function Footer() {
                 >
                   Subscribe
                 </Button>
-              </Stack>
+              </Stack> */}
             </Box>
           </Box>
           <Box
@@ -106,13 +111,13 @@ export default function Footer() {
             }}
           >
             <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
-              Product
+              Sites
             </Typography>
-            <Link color="text.secondary" variant="body2" href="#">
-              Features
+            <Link color="text.secondary" variant="body2" href="https://locicerohealth.com">
+              LoCicero Health
             </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Testimonials
+            <Link color="text.secondary" variant="body2" href="https://www.weightmanagement.com">
+              Weight Management
             </Link>
             <Link color="text.secondary" variant="body2" href="#">
               Highlights
@@ -124,7 +129,7 @@ export default function Footer() {
               FAQs
             </Link>
           </Box>
-          <Box
+          {/* <Box
             sx={{
               display: { xs: 'none', sm: 'flex' },
               flexDirection: 'column',
@@ -143,8 +148,8 @@ export default function Footer() {
             <Link color="text.secondary" variant="body2" href="#">
               Press
             </Link>
-          </Box>
-          <Box
+          </Box> */}
+          {/* <Box
             sx={{
               display: { xs: 'none', sm: 'flex' },
               flexDirection: 'column',
@@ -163,7 +168,7 @@ export default function Footer() {
             <Link color="text.secondary" variant="body2" href="#">
               Contact
             </Link>
-          </Box>
+          </Box> */}
         </Box>
         <Box
           sx={{
@@ -176,7 +181,7 @@ export default function Footer() {
           }}
         >
           <div>
-            <Link color="text.secondary" variant="body2" href="#">
+            {/* <Link color="text.secondary" variant="body2" href="#">
               Privacy Policy
             </Link>
             <Typography sx={{ display: 'inline', mx: 0.5, opacity: 0.5 }}>
@@ -184,7 +189,7 @@ export default function Footer() {
             </Typography>
             <Link color="text.secondary" variant="body2" href="#">
               Terms of Service
-            </Link>
+            </Link> */}
             <Copyright />
           </div>
           <Stack
@@ -193,7 +198,7 @@ export default function Footer() {
             useFlexGap
             sx={{ justifyContent: 'left', color: 'text.secondary' }}
           >
-            <IconButton
+            {/* <IconButton
               color="inherit"
               size="small"
               href="https://github.com/mui"
@@ -210,11 +215,11 @@ export default function Footer() {
               sx={{ alignSelf: 'center' }}
             >
               <TwitterIcon />
-            </IconButton>
+            </IconButton> */}
             <IconButton
               color="inherit"
               size="small"
-              href="https://www.linkedin.com/company/mui/"
+              href="https://www.linkedin.com/company/28176256"
               aria-label="LinkedIn"
               sx={{ alignSelf: 'center' }}
             >
