@@ -119,15 +119,6 @@ export default function Footer() {
             <Link color="text.secondary" variant="body2" href="https://www.weightmanagement.com">
               Weight Management
             </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Highlights
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Pricing
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              FAQs
-            </Link>
           </Box>
           {/* <Box
             sx={{
