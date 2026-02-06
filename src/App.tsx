@@ -10,7 +10,7 @@ import ScrollToTop from './blog/components/ScrollToTop.tsx';
 export default function App() {
   return (
 
-    <BrowserRouter basename="/Locicero-Hospital-Group">
+    <BrowserRouter basename="/">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Blog />} />
