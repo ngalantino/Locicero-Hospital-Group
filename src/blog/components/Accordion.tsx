@@ -133,9 +133,7 @@ export default function FacilityAccordion() {
                                     "Allegro Senior Living",
                                     "Bayshore Pointe Nursing and Rehabilitation",
                                     "Blue Heron Senior Living",
-                                    "Canterbury Tower",
-                                    "Elon Manor Nursing and Rehabilitation Center",
-                                    "Hawthorne Village of Brandon Health and Rehabilitation"
+                                    "Canterbury Tower"
                                 ].map((hospital) => (
                                     <ListItem key={hospital} disableGutters sx={{ py: 0.5 }}>
                                         <ListItemIcon sx={{ minWidth: 24 }}>
@@ -152,12 +150,9 @@ export default function FacilityAccordion() {
                             {/* Right List */}
                             <List sx={{ flex: 1, py: 0 }}>
                                 {[
-                                    "Lakes at Lutz Healthcare and Rehabilitation",
                                     "Rehabilitation and Healthcare Center of Tampa",
                                     "Tampa Lakes Health and Rehabilitation Center",
-                                    "Vivo Gandy Crossing Care Center",
-                                    "Woodbridge Care Center",
-                                    "Ybor City Healthcare and Rehab Center"
+                                    "Woodbridge Care Center"
                                 ].map((hospital) => (
                                     <ListItem key={hospital} disableGutters sx={{ py: 0.5 }}>
                                         <ListItemIcon sx={{ minWidth: 24 }}>
